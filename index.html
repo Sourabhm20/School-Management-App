@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>School Management System</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#teachers">Teachers</a></li>
+        <li><a href="#students">Students</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Classes Section -->
+    <section id="classes">
+      <h2>Classes Management</h2>
+      <form id="class-form">
+        <input type="text" placeholder="Class Name" id="class-name" required>
+        <input type="number" placeholder="Year" id="class-year" required>
+        <input type="text" placeholder="Teacher" id="class-teacher" required>
+        <input type="number" placeholder="Fees" id="class-fees" required>
+        <button type="submit">Add Class</button>
+      </form>
+      <table id="class-table">
+        <thead>
+          <tr>
+            <th>Class Name</th>
+            <th>Year</th>
+            <th>Teacher</th>
+            <th>Fees</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers">
+      <h2>Teachers Management</h2>
+      <form id="teacher-form">
+        <input type="text" placeholder="Name" id="teacher-name" required>
+        <input type="text" placeholder="Gender" id="teacher-gender" required>
+        <input type="date" id="teacher-dob" required>
+        <input type="text" placeholder="Contact" id="teacher-contact" required>
+        <input type="number" placeholder="Salary" id="teacher-salary" required>
+        <button type="submit">Add Teacher</button>
+      </form>
+      <table id="teacher-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Contact</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students">
+      <h2>Students Management</h2>
+      <form id="student-form">
+        <input type="text" placeholder="Name" id="student-name" required>
+        <input type="text" placeholder="Gender" id="student-gender" required>
+        <input type="date" id="student-dob" required>
+        <input type="text" placeholder="Contact" id="student-contact" required>
+        <input type="checkbox" id="fees-paid"> Fees Paid
+        <button type="submit">Add Student</button>
+      </form>
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Contact</th>
+            <th>Fees Paid</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Filtering Controls for Classes -->
+<section id="classes">
+    <h2>Classes Management</h2>
+    <div class="filter-controls">
+      <input type="text" id="class-filter-name" placeholder="Filter by Class Name">
+      <button onclick="filterClasses()">Filter</button>
+    </div>
+    <!-- Existing form and table -->
+  </section>
+  
+  <!-- Filtering Controls for Teachers -->
+  <section id="teachers">
+    <h2>Teachers Management</h2>
+    <div class="filter-controls">
+      <input type="text" id="teacher-filter-name" placeholder="Filter by Name">
+      <select id="teacher-filter-gender">
+        <option value="">All Genders</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <button onclick="filterTeachers()">Filter</button>
+    </div>
+    <!-- Existing form and table -->
+  </section>
+  
+  <!-- Filtering Controls for Students -->
+  <section id="students">
+    <h2>Students Management</h2>
+    <div class="filter-controls">
+      <input type="text" id="student-filter-name" placeholder="Filter by Name">
+      <select id="student-filter-gender">
+        <option value="">All Genders</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <button onclick="filterStudents()">Filter</button>
+    </div>
+    <!-- Existing form and table -->
+  </section>
+
+  <div class="pagination-controls">
+    <button onclick="changePage(-1)">Previous</button>
+    <span id="current-page">1</span>
+    <button onclick="changePage(1)">Next</button>
+  </div>
+  
+  <div class="pagination-controls">
+    <button onclick="changePage('prev')">Previous</button>
+    <span id="current-page">1</span>
+    <button onclick="changePage('next')">Next</button>
+  </div>
+
+  <div class="filter-sort-controls">
+    <input type="text" id="filter-input" placeholder="Filter by name">
+    <button onclick="filterTable('class-table')">Filter</button>
+    <select id="sort-select">
+        <option value="name">Sort by Name</option>
+        <option value="year">Sort by Year</option>
+    </select>
+    <button onclick="sortTable('class-table')">Sort</button>
+  </div>
+
+  <form id="class-form">
+    <input type="text" id="class-name" placeholder="Class Name" required maxlength="50">
+    <input type="number" id="class-year" placeholder="Year" required min="2000" max="2100">
+    <input type="number" id="class-fees" placeholder="Fees" required min="0">
+    <button type="submit">Submit</button>
+ </form>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
