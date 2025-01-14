@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #85b5db;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* Smooth Table Row Appearance */
+.data-table tbody tr {
+  opacity: 0;
+  animation: fadeInRow 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInRow {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Hover Effect for Table Rows */
+.data-table tbody tr:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #71a3cc;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Hover Effect for Buttons */
+button:hover {
+  background-color: #71a3cc;
+  color: white;
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+/* Hover Effect for Pagination Controls */
+.pagination-controls button:hover {
+  background-color: #71a3cc;
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+/* Global Background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #a284c1, #2575fc); /* Gradient background */
+}
+
+/* Section Containers */
+.section {
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff; /* White background for sections */
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+}
+
+/* Header Background */
+.header {
+  background-color: #0078d7;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Footer Background */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0078d7;
+  color: white;
+}
+
+body {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button Click Animation */
+button:active {
+  transform: scale(0.95); /* Shrink slightly */
+  transition: transform 0.1s ease;
+}
+
+/* Fade-in effect for table rows when they are added */
+@keyframes fadeInRow {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in-row {
+  animation: fadeInRow 0.5s ease-in-out forwards;
+}
